@@ -1,0 +1,20 @@
+# Java / Spring Boot
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+*.class
+
+# Node / React
+frontend/node_modules/
+frontend/dist/
+
+# IDE
+.vscode/
+.idea/
+
+# Sistema
+.DS_Store
+
+# Variables privadas
+.env
+application-local.yml
+
