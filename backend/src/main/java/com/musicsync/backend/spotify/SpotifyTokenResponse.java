@@ -1,7 +1,9 @@
 package com.musicsync.backend.spotify;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public record SpotifyTokenResponse(
     @JsonProperty("access_token")
     String accessToken,
@@ -11,7 +13,7 @@ public record SpotifyTokenResponse(
 
     @JsonProperty("scope")
     String scope,
-    
+
     @JsonProperty("expires_in")
     int expiresIn,
 
