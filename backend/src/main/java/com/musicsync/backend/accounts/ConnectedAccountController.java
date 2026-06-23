@@ -20,7 +20,7 @@ public class ConnectedAccountController {
         return connectedAccountRepository.findAll();
     }
 
-
+    // Pruebas para crear cuentas conectadas de Spotify y YouTube
     @PostMapping("/test/spotify")
     public ConnectedAccount createSpotifyTestAccount() {
         ConnectedAccount account = new ConnectedAccount(
@@ -44,7 +44,7 @@ public class ConnectedAccountController {
         );
         return connectedAccountRepository.save(account);
     }
-    
+
     
 
 

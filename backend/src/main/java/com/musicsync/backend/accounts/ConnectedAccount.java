@@ -3,6 +3,8 @@ package com.musicsync.backend.accounts;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -21,7 +23,7 @@ public class ConnectedAccount {
 
     @Column(length = 2000)
     private String accessToken;
-    
+
     @Column(length = 2000)
     private String refreshToken;
 
@@ -55,10 +57,12 @@ public class ConnectedAccount {
         return providerUserId;
     }
 
+    @JsonIgnore
     public String getAccessToken() {
         return accessToken;
     }
 
+    @JsonIgnore
     public String getRefreshToken() {
         return refreshToken;
     }
