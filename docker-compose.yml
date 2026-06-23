@@ -3,9 +3,9 @@ services:
     image: postgres:16
     container_name: music_sync_postgres
     environment:
-      POSTGRES_DB: ${POSTGRES_DB}
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-music_sync}
+      POSTGRES_USER: ${POSTGRES_USER:-music_sync}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-music_sync}
     ports:
       - "5432:5432"
     volumes:

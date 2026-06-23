@@ -1,4 +1,7 @@
+# Variables privadas
 .env
+.env.*
+!.env.example
 
 # Backend
 backend/target/
@@ -10,3 +13,6 @@ frontend/dist/
 # IDE
 .vscode/
 .idea/
+
+# Sistema
+.DS_Store
